@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'financial-wallet-ng';
+
+  active = true
+
+  constructor(private router: Router) { }
+
+  visibleOn() {
+    this.active = this.router.url == '/Home';
+    return this.active;
+  }
 }

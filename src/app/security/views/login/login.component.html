@@ -1,0 +1,36 @@
+<section>
+  <div class="imgBx">
+    <img src="assets/img/bg2.jpg" alt="">
+  </div>
+  <div class="contentBX">
+    <div class="formBx">
+      <h2>Login</h2>
+      <p>Don't have an account? <a href="/SignUp">Sign up</a></p>
+      <form [formGroup]="loginForm" (ngSubmit)="logIn()" novalidate>
+        <div class="error" *ngIf="loginInvalid">
+          <p>The username/email or password were not recognized</p>
+        </div>
+        <div class="inputBx">
+          <span>Username/Email</span>
+          <input type="text" name="" formControlName="username">
+        </div>
+        <div class="inputBx">
+          <span>Password</span>
+          <input type="password" name="" formControlName="password">
+        </div>
+        <div class="remember">
+          <label><input type="checkbox" name=""> Remember me</label>
+        </div>
+        <div class="inputBx">
+          <input type="submit" value="Sign in" name="">
+        </div>
+      </form>
+      <h3>Or you can join with</h3>
+      <ul class="sci">
+        <li><img src="assets/ico/google.png" alt=""></li>
+        <li><img src="assets/ico/facebook.png" alt=""></li>
+        <li><img src="assets/ico/twitter.png" alt=""></li>
+      </ul>
+    </div>
+  </div>
+</section>

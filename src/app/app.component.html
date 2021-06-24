@@ -1,11 +1,14 @@
 <div class="container">
   <div class="navbar">
-    <img src="./assets/ico/primary_logo.png" class="logo" alt="">
-    <nav>
+    <a href="/Home"><img src="./assets/ico/primary_logo.png" class="logo" alt=""></a>
+    <nav *ngIf="visibleOn()">
       <ul>
-        <li><a href="">Log In</a></li>
-        <li><a href="">Sign Up</a></li>
+        <li><a href="/SignUp">Sign Up</a></li>
+        <li><a href="/LogIn">Log In</a></li>
       </ul>
     </nav>
   </div>
+</div>
+<div class="container-body">
+  <router-outlet></router-outlet>
 </div>
