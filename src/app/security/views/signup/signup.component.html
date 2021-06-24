@@ -1,0 +1,51 @@
+<section>
+  <div class="imgBx">
+    <img src="assets/img/bg2.jpg" alt="">
+  </div>
+  <div class="contentBX">
+    <div class="formBx">
+      <h2>Sign Up</h2>
+      <p>Already have an account? <a href="/LogIn">Log In</a></p>
+      <form [formGroup]="registerForm" (ngSubmit)="signUp()">
+        <div class="inputBx">
+          <span>Username</span>
+          <input type="text" name="" formControlName="username" required>
+        </div>
+        <div class="inputBx">
+          <span>Email</span>
+          <input type="email" name="" formControlName="email" required>
+        </div>
+        <div class="inputBx">
+          <span>Password</span>
+          <input type="password" name="" formControlName="password" required>
+        </div>
+        <div class="inputBx-double">
+          <div class="inputBx-left">
+            <span>Name</span>
+            <input type="text" name="" formControlName="name" required>
+          </div>
+          <div class="inputBx-right">
+            <span>Last Name</span>
+            <input type="text" name="" formControlName="lastName" required>
+          </div>
+        </div>
+        <div class="inputBx-double">
+          <div class="inputBx-left">
+            <span>DNI</span>
+            <input type="text" name="" formControlName="dni" required>
+          </div>
+          <div class="inputBx-right">
+            <span>Phone</span>
+            <input type="text" name="" formControlName="phone" required>
+          </div>
+        </div>
+        <div class="accept">
+          <label><input type="checkbox" name=""> I agree to all the <a href="#">Term, Privacy Policy and Fees</a></label>
+        </div>
+        <div class="inputBx">
+          <input type="submit" value="Register" name="">
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
