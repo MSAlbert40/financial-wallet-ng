@@ -25,6 +25,8 @@ export class AuthService {
   loginUser(token: string, user: number) {
     localStorage.setItem('token', token);
     localStorage.setItem('id', String(user));
+    localStorage.removeItem('enterpriseID');
+    localStorage.removeItem('enterpriseName');
     return true;
   }
 

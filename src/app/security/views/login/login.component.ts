@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
         },
         next: (res) => {
           this.authService.loginUser(res.data.token, res.data.id);
-          //window.location.href = '/Enterprise';
+          window.location.href = '/Enterprise';
         },
         complete: () => {
           console.log('complete');

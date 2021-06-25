@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'financial-wallet-ng';
 
   active = true
+  enterprise: any;
 
   constructor(private router: Router) { }
 

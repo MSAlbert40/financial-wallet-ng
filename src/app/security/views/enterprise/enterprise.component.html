@@ -1,0 +1,12 @@
+<section>
+  <div class="container">
+      <div class="view-cards">
+        <div *ngFor="let enterprise of enterpriseList">
+          <app-enterprise-card [enterpriseCard]="enterprise"></app-enterprise-card>
+        </div>
+      </div>
+    <div class="add-cards">
+      <input type="submit" value="Add Enterprise" name="">
+    </div>
+  </div>
+</section>

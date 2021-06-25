@@ -9,12 +9,16 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { HeaderInterceptor } from "./security/interceptors/header.interceptor";
+import { EnterpriseComponent } from './security/views/enterprise/enterprise.component';
+import { EnterpriseCardComponent } from './security/views/enterprise/enterprise-card/enterprise-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    EnterpriseComponent,
+    EnterpriseCardComponent
   ],
   imports: [
     BrowserModule,

@@ -142,7 +142,7 @@ section .contentBX .formBx .sci li {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  box-shadow: 2px 2px 5px #262524;
+  box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
   margin: 0 8px;
   cursor: pointer;
 }
