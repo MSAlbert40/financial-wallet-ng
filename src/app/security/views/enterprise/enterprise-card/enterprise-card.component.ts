@@ -11,8 +11,13 @@ export class EnterpriseCardComponent implements OnInit {
 
   @Input() enterpriseCard: EnterpriseClass | null | undefined;
 
-  constructor(private enterprise: EnterpriseService) { }
+  constructor(private enterpriseService: EnterpriseService) { }
 
   ngOnInit(): void { }
 
+  enterDashboard(): void {
+    this.enterpriseService.setEnterprise(this.enterpriseCard?.id, this.enterpriseCard?.name);
+    console.log(this.enterpriseCard);
+    //window.location.href = '/Dashboard';
+  }
 }

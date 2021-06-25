@@ -1,0 +1,44 @@
+<section>
+  <div class="contentBX">
+    <div class="formBx">
+      <h2>New Enterprise</h2>
+      <form [formGroup]="enterpriseForm" (ngSubmit)="addEnterprise()">
+        <div class="inputBx-double">
+          <div class="inputBx-left">
+            <span>RUC</span>
+            <input type="text" name="" formControlName="ruc" required>
+          </div>
+          <div class="inputBx-right">
+            <span>Name</span>
+            <input type="text" name="" formControlName="name" required>
+          </div>
+        </div>
+        <div class="inputBx">
+          <span>Economic Activity</span>
+          <select [(ngModel)]="economicActivityId" name="" [ngModelOptions]="{standalone: true}">
+            <option *ngFor="let economicActivity of economicActivityList" [value]="economicActivity.id">
+              {{economicActivity.name}}
+            </option>
+          </select>
+        </div>
+        <div class="inputBx">
+          <span>Email</span>
+          <input type="email" name="" formControlName="email" required>
+        </div>
+        <div class="inputBx-double">
+          <div class="inputBx-left">
+            <span>Phone</span>
+            <input type="text" name="" formControlName="phone" required>
+          </div>
+          <div class="inputBx-right">
+            <span>Address</span>
+            <input type="text" name="" formControlName="address" required>
+          </div>
+        </div>
+        <div class="inputBx">
+          <input type="submit" value="Register" name="">
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

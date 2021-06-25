@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {EnterpriseService} from "../../services/enterprise.service";
 import {AuthService} from "../../services/auth.service";
 import {EnterpriseClass} from "../../interfaces/enterprise-class";
+import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
+import {EnterpriseNewComponent} from "./enterprise-new/enterprise-new.component";
 
 @Component({
   selector: 'app-enterprise',
@@ -13,7 +15,7 @@ export class EnterpriseComponent implements OnInit {
   managerId: string | null | undefined;
   enterpriseList: EnterpriseClass[] = [];
 
-  constructor(private enterpriseService: EnterpriseService, private authService: AuthService) { }
+  constructor(private enterpriseService: EnterpriseService, private authService: AuthService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.managerId = this.authService.getUser();
@@ -31,5 +33,11 @@ export class EnterpriseComponent implements OnInit {
         complete: () => console.log('Complete')
       });
     }
+  }
+
+  newEnterprise(): void {
+    this.dialog.open(EnterpriseNewComponent, {
+      autoFocus: true
+    });
   }
 }
