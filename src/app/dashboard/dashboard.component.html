@@ -1,1 +1,50 @@
-<p>dashboard works!</p>
+<section>
+  <div class="main">
+    <div class="main-info">
+      <div class="view-info">
+        <span>Welcome, {{nameUser}} - <a href="" class="main-button" (click)="newOperation()">Start</a> -</span>
+        <h1>Create your First <a>Financial Wallet</a></h1>
+      </div>
+    </div>
+    <div class="main-img">
+      <div class="view-info">
+        <div class="card card1" (click)="viewAllOperation('WALLET_BILLS')">
+          <div class="second-info">
+
+          </div>
+          <div class="primary-info">
+            <span>Type Wallet</span>
+            <h2>Bills</h2>
+          </div>
+        </div>
+        <div class="card card2" (click)="viewAllOperation('WALLET_LETTERS')">
+          <div class="second-info">
+
+          </div>
+          <div class="primary-info">
+            <span>Type Wallet</span>
+            <h2>Letters</h2>
+          </div>
+        </div>
+        <div class="card card3" (click)="viewAllOperation('WALLET_MIXED')">
+          <div class="second-info">
+
+          </div>
+          <div class="primary-info">
+            <span>Type Wallet</span>
+            <h2>Mixed</h2>
+          </div>
+        </div>
+        <div class="card card4" (click)="viewAllOperation('WALLET_RECEIPTS_OF_HONORARY')">
+          <div class="second-info">
+
+          </div>
+          <div class="primary-info">
+            <span>Type Wallet</span>
+            <h2>Honorary</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

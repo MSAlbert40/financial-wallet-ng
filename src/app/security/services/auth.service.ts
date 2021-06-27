@@ -22,11 +22,14 @@ export class AuthService {
     return this.http.post<MessageResponse<IAuthResponse>>(environment.apiURL + '/auth/signup', body);
   }
 
-  loginUser(token: string, user: number) {
+  loginUser(token: string, user: number, name: string) {
     localStorage.setItem('token', token);
     localStorage.setItem('id', String(user));
+    localStorage.setItem('nameUser', name);
     localStorage.removeItem('enterpriseID');
     localStorage.removeItem('enterpriseName');
+    localStorage.removeItem('walletID');
+    localStorage.removeItem('walletName');
     return true;
   }
 
@@ -44,4 +47,6 @@ export class AuthService {
   getToken() { return localStorage.getItem('token'); }
 
   getUser() { return localStorage.getItem('id'); }
+
+  getNameUser() { return localStorage.getItem('nameUser'); }
 }

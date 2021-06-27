@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
           this.loginInvalid = true;
         },
         next: (res) => {
-          this.authService.loginUser(res.data.token, res.data.id);
+          this.authService.loginUser(res.data.token, res.data.id, res.data.name);
           window.location.href = '/Enterprise';
         },
         complete: () => {

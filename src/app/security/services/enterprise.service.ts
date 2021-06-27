@@ -22,14 +22,14 @@ export class EnterpriseService {
     return this.http.get<MessageResponse<EconomicActivityClass[]>>(environment.apiURL + '/economicActivity/');
   }
 
-    newEnterprise(body: EnterpriseRequest, economicActivity: number | undefined, manager: number): Observable<MessageResponse<EnterpriseClass>> {
+  newEnterprise(body: EnterpriseRequest, economicActivity: number | undefined, manager: number): Observable<MessageResponse<EnterpriseClass>> {
     let params = new HttpParams();
     params = params.set('economicActivityId', String(economicActivity));
     params = params.set('managerId', String(manager));
     return this.http.post<MessageResponse<EnterpriseClass>>(environment.apiURL + '/enterprise/add', body, {params});
   }
 
-    setEnterprise(id: number | undefined, name: string | undefined): void {
+  setEnterprise(id: number | undefined, name: string | undefined): void {
     localStorage.setItem('enterpriseID', String(id));
     localStorage.setItem('enterpriseName', String(name));
   }

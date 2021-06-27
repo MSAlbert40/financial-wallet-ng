@@ -3,7 +3,150 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  overflow: hidden;
   color: rgb(242, 242, 242);
   font-family: 'Economica', sans-serif;
 }
+
+a {
+  text-decoration: none;
+}
+
+section .main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+section .main .main-info {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section .main .main-info .view-info {
+  width: 83%;
+  margin-left: 2rem;
+  position: relative;
+}
+
+section .main .main-info .view-info span {
+  font-size: 2.8vw;
+  line-height: 1.7em;
+}
+
+section .main .main-info .view-info span a {
+  color: #04BFAD;
+  font-weight: bold;
+}
+
+section .main .main-info .view-info h1 {
+  font-size: 7vw;
+  line-height: 90%;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+section .main .main-info .view-info h1 a {
+  color: #04BFAD;
+  font-size: 5.7vw;
+}
+
+section .main .main-img {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .main .main-img .view-info {
+  width: 80%;
+  position: relative;
+}
+
+.card {
+  float: right;
+  width: 12vw;
+  height: 25vh;
+  border-radius: 15px;
+  padding: 15px 25px;
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px 10px;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+}
+
+.card1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("src/assets/img/bg1.jpg");
+}
+
+.card2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("src/assets/img/bg2.jpg");
+}
+
+.card3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("src/assets/img/bg3.jpg");
+}
+
+.card4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("src/assets/img/bg4.jpg");
+}
+
+.card .second-info {
+  width: 100%;
+  height: 70%;
+  margin: auto 20px;
+}
+
+.card .primary-info {
+  width: 100%;
+  height: 30%;
+}
+
+.card .primary-info h2 {
+  position: relative;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: normal;
+  font-size: 2.8vw;
+}
+
+.card .primary-info span {
+  position: relative;
+  top: 4px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/*
+section .container .row {
+  display: flex;
+  height: 88%;
+  align-items: center;
+}
+
+section .row .col {
+  flex-basis: 40%;
+}
+
+section .row .col .card {
+  width: 250px;
+  height: 270px;
+  display: inline-block;
+  border-radius: 15px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-color: #04BFAD;
+}
+
+section .row .col .card h5 {
+  color: #262524;
+  font-size: 20px;
+}
+*/
