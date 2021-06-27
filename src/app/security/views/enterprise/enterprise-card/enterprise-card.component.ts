@@ -18,6 +18,6 @@ export class EnterpriseCardComponent implements OnInit {
   enterDashboard(): void {
     this.enterpriseService.setEnterprise(this.enterpriseCard?.id, this.enterpriseCard?.name);
     console.log(this.enterpriseCard);
-    //window.location.href = '/Dashboard';
+    window.location.href = '/Dashboard';
   }
 }

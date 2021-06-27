@@ -7,6 +7,12 @@
         <li><a href="/LogIn">Log In</a></li>
       </ul>
     </nav>
+    <nav *ngIf="visibleOff()">
+      <ul>
+        <li><a href="/Enterprise">{{enterprise}}</a></li>
+        <li><a href="/Home" (click)="LogOut()">Log Out</a></li>
+      </ul>
+    </nav>
   </div>
 </div>
 <div class="container-body">

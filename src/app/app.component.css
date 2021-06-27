@@ -45,12 +45,13 @@ nav ul li {
   display: inline-block;
   list-style: none;
   margin: auto 1.1em;
+  font-family: 'Economica', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: rgb(242, 242, 242);
 }
 
 nav ul li a {
   text-decoration: none;
-  font-family: 'Economica', sans-serif;
-  font-weight: bold;
-  font-size: 24px;
   color: rgb(242, 242, 242);
 }

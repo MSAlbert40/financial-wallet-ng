@@ -14,6 +14,7 @@ import { EnterpriseCardComponent } from './security/views/enterprise/enterprise-
 import { EnterpriseNewComponent } from './security/views/enterprise/enterprise-new/enterprise-new.component';
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatSelectModule } from "@angular/material/select";
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MatSelectModule } from "@angular/material/select";
     SignupComponent,
     EnterpriseComponent,
     EnterpriseCardComponent,
-    EnterpriseNewComponent
+    EnterpriseNewComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
