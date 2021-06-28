@@ -25,7 +25,8 @@ export class AppComponent {
   }
 
   visibleOff() {
-    this.access = this.router.url == '/Dashboard';
+    if (this.router.url == '/Dashboard' || this.router.url == '/Operation' || this.router.url == '/Wallet')
+    this.access = true;
     return this.access
   }
 

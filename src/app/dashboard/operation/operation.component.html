@@ -1,0 +1,163 @@
+<section>
+  <div class="superior">
+    <div class="center">
+      <div class="rate-card">
+        <h2>Rate</h2>
+        <div class="fill">
+          <span>Type Rate</span>
+          <p>{{rateName}}</p>
+        </div>
+        <div class="fill">
+          <span>Days of Year</span>
+          <p>{{rateDetail.daysYear}}</p>
+        </div>
+        <div class="fill">
+          <span>Period Rate</span>
+          <p>{{rateDetail.periodRate}}</p>
+        </div>
+        <div class="fill">
+          <span>Period Capitalization</span>
+          <p>{{rateDetail.periodCapitalization}}</p>
+        </div>
+      </div>
+      <div class="discount-card">
+        <h2>Discount</h2>
+        <form class="double-fill" [formGroup]="discountForm">
+          <div class="left-fill">
+            <div class="fill">
+              <span>Initial Date</span>
+              <input type="date" name="" formControlName="initialAt">
+            </div>
+            <div class="fill">
+              <span>Expiration Date</span>
+              <input type="date" name="" formControlName="expirationAt">
+            </div>
+            <div class="fill">
+              <span>Document Name</span>
+              <select [(ngModel)]="selectDocument" name="" [ngModelOptions]="{standalone: true}">
+                <option *ngFor="let document of typeDocument" [value]="document.name">{{document.name}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="right-fill">
+            <div class="fill">
+              <span>Value Nominal</span>
+              <input type="text" name="" formControlName="valueNominal">
+            </div>
+            <div class="fill">
+              <span>Retention</span>
+              <input type="text" name="" formControlName="retention">
+            </div>
+            <div class="fillSx">
+              <input type="submit" value="Add Discount" name="" (click)="addDiscount()">
+              <input type="submit" value="Save" class="move" name="" (click)="saveWallet()">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="wallet-card">
+        <h2>Wallet</h2>
+        <div class="fill">
+          <span>Enterprise</span>
+          <p>{{walletDetail.enterprise.name}}</p>
+        </div>
+        <div class="fill">
+          <span>Currency</span>
+          <p>{{walletDetail.currency}}</p>
+        </div>
+        <div class="fill">
+          <span>VR</span>
+          <p>{{walletDetail.valueTotalReceived}}</p>
+        </div>
+        <div class="fill">
+          <span>TCEA</span>
+          <p>{{walletDetail.valueTCEA}} %</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="inferior">
+    <div class="limit">
+      <table mat-table [dataSource]="discountList" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="documentName">
+          <th mat-header-cell *matHeaderCellDef> Name Document </th>
+          <td mat-cell *matCellDef="let discount"> {{discount.documentName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="initialAt">
+          <th mat-header-cell *matHeaderCellDef> Turn Date </th>
+          <td mat-cell *matCellDef="let discount"> {{discount.initialAt}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="valueNominal">
+          <th mat-header-cell *matHeaderCellDef> Val. Nom </th>
+          <td mat-cell *matCellDef="let discount"> {{discount.valueNominal}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="expirationAt">
+          <th mat-header-cell *matHeaderCellDef> Expiration Date </th>
+          <td mat-cell *matCellDef="let discount"> {{discount.expirationAt}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="daysPeriod">
+          <th mat-header-cell *matHeaderCellDef> Days </th>
+          <td mat-cell *matCellDef="let discount"> {{discount.daysPeriod}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="retention">
+          <th mat-header-cell *matHeaderCellDef> Retention </th>
+          <td mat-cell *matCellDef="let discount"> {{discount.retention}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="rateEffective">
+          <th mat-header-cell *matHeaderCellDef> TE% </th>
+          <td mat-cell *matCellDef="let discount"> {{discount.rateEffective}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="rateDiscount">
+          <th mat-header-cell *matHeaderCellDef> d% </th>
+          <td mat-cell *matCellDef="let discount"> {{discount.rateDiscount}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="valueDiscount">
+          <th mat-header-cell *matHeaderCellDef> Discount </th>
+          <td mat-cell *matCellDef="let discount"> {{discount.valueDiscount}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="expenseInitial">
+          <th mat-header-cell *matHeaderCellDef> Expense Ini. </th>
+          <td mat-cell *matCellDef="let discount"> {{discount.expenseInitial}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="expenseFinal">
+          <th mat-header-cell *matHeaderCellDef> Expense Fin. </th>
+          <td mat-cell *matCellDef="let discount"> {{discount.expenseFinal}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="valueNet">
+          <th mat-header-cell *matHeaderCellDef> Val. Net </th>
+          <td mat-cell *matCellDef="let discount"> {{discount.valueNet}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="valueReceived">
+          <th mat-header-cell *matHeaderCellDef> Val. Rec. </th>
+          <td mat-cell *matCellDef="let discount"> {{discount.valueReceived}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="valueDelivered">
+          <th mat-header-cell *matHeaderCellDef> Val. Del. </th>
+          <td mat-cell *matCellDef="let discount"> {{discount.valueDelivered}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="TCEA">
+          <th mat-header-cell *matHeaderCellDef> TCEA </th>
+          <td mat-cell *matCellDef="let discount"> {{discount.tcea}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+</section>

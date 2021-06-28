@@ -1,0 +1,42 @@
+<section>
+  <div class="superior">
+    <div class="center">
+      <span>Type </span>
+      <h2>{{walletName}}</h2>
+    </div>
+  </div>
+  <div class="inferior">
+    <div class="limit" *ngFor="let wallet of walletList">
+      <div class="wallet-item">
+        <div class="col-wallet">
+          <div class="row-wallet">
+            <h4>Currency</h4>
+            <p>{{wallet.currency}}</p>
+          </div>
+          <div class="row-wallet">
+            <h4>Enterprise</h4>
+            <p>{{wallet.enterprise.name}}</p>
+          </div>
+          <div class="row-wallet">
+            <h4>Rate</h4>
+            <p></p>
+          </div>
+        </div>
+        <div class="col-wallet">
+          <div class="row-wallet">
+            <h4>VR</h4>
+            <p>{{wallet.valueTotalReceived}}</p>
+          </div>
+          <div class="row-wallet">
+            <h4>Type Wallet</h4>
+            <p>{{walletLabel}}</p>
+          </div>
+          <div class="row-wallet">
+            <h4>TCEA</h4>
+            <p>{{wallet.valueTCEA}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

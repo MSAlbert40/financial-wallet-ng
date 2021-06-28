@@ -9,6 +9,8 @@ export interface DiscountClass {
   rateEffective: number;
   rateDiscount: number;
   valueDiscount: number;
+  expenseInitial: number;
+  expenseFinal: number;
   valueNet: number;
   valueReceived: number;
   valueDelivered: number;

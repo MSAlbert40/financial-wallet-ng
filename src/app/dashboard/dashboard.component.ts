@@ -42,6 +42,6 @@ export class DashboardComponent implements OnInit {
   viewAllOperation(names: string): void {
     this.walletService.setWallet(names);
     console.log(names);
-    //window.location.href = '/Wallet';
+    window.location.href = '/Wallet';
   }
 }

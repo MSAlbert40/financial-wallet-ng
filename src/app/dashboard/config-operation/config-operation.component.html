@@ -1,0 +1,112 @@
+<section>
+  <div class="imgBx">
+    <div class="formBx" *ngIf="stepExpense">
+      <table mat-table [dataSource]="expenseList" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="typeExpense">
+          <th mat-header-cell *matHeaderCellDef> Type Expense </th>
+          <td mat-cell *matCellDef="let expense"> {{expense.typeExpense.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="reason">
+          <th mat-header-cell *matHeaderCellDef> Reason </th>
+          <td mat-cell *matCellDef="let expense"> {{expense.reason}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="typeValue">
+          <th mat-header-cell *matHeaderCellDef> Type Value </th>
+          <td mat-cell *matCellDef="let expense"> {{expense.typeValue}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="value">
+          <th mat-header-cell *matHeaderCellDef> Value </th>
+          <td mat-cell *matCellDef="let expense"> {{expense.value}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+  <div class="contentBX">
+    <div class="formBx" *ngIf="stepRate">
+      <span>Step 1</span>
+      <h2>Rate</h2>
+      <form [formGroup]="rateForm" (ngSubmit)="addRate()" novalidate>
+        <div class="inputBx">
+          <span>Type Rate</span>
+          <select [(ngModel)]="selectRate" name="" [ngModelOptions]="{standalone: true}">
+            <option *ngFor="let rate of typeRate" [value]="rate.origin">{{rate.name}}</option>
+          </select>
+        </div>
+        <div class="inputBx">
+          <span>Days of the Year</span>
+          <input type="text" name="" [(ngModel)]="selectYear" formControlName="daysYear">
+          <select name="" [(ngModel)]="selectYear" [ngModelOptions]="{standalone: true}">
+            <option *ngFor="let year of yearDays" [value]="year.days">{{year.name}}</option>
+          </select>
+        </div>
+        <div class="inputBx">
+          <span>Rate Period</span>
+          <input type="text" name="" [(ngModel)]="selectPeriodRate" formControlName="daysRate">
+          <select name="" [(ngModel)]="selectPeriodRate" [ngModelOptions]="{standalone: true}">
+            <option *ngFor="let periods of periodRate" [value]="periods.days">{{periods.name}}</option>
+          </select>
+        </div>
+        <div class="inputBx">
+          <span>Rate</span>
+          <input type="text" name="" formControlName="valueRate">
+        </div>
+        <div class="inputBx" *ngIf="(selectRate == 'RATE_NOMINAL')">
+          <span>Capitalization Period</span>
+          <input type="text" name="" [(ngModel)]="selectPeriodCapitalization" formControlName="daysCapitalization">
+          <select name="" [(ngModel)]="selectPeriodCapitalization" [ngModelOptions]="{standalone: true}">
+            <option *ngFor="let periods of periodCapitalization" [value]="periods.days">{{periods.name}}</option>
+          </select>
+        </div>
+        <div class="inputBx">
+          <span>Discount Date</span>
+          <input type="date" name="" formControlName="discountAt">
+        </div>
+        <div class="inputSx">
+          <input type="submit" value="Next Step" name="">
+        </div>
+      </form>
+    </div>
+    <div class="formBx" *ngIf="stepExpense">
+      <span>Step 2</span>
+      <h2>Expenses</h2>
+      <form [formGroup]="expenseForm" novalidate>
+        <div class="inputBx">
+          <span>Type Expense</span>
+          <select [(ngModel)]="selectExpense" name="" [ngModelOptions]="{standalone: true}">
+            <option *ngFor="let expense of typeExpense" [value]="expense.origin">{{expense.name}}</option>
+          </select>
+        </div>
+        <div class="inputLBx" *ngIf="(selectExpense == 'EXPENSE_INITIAL')">
+          <span>Reason</span>
+          <select [(ngModel)]="selectIReason" name="" [ngModelOptions]="{standalone: true}">
+            <option *ngFor="let reason of typeIReason" [value]="reason.name">{{reason.name}}</option>
+          </select>
+        </div>
+        <div class="inputLBx" *ngIf="(selectExpense == 'EXPENSE_FINAL')">
+          <span>Reason</span>
+          <select [(ngModel)]="selectFReason" name="" [ngModelOptions]="{standalone: true}">
+            <option *ngFor="let reason of typeFReason" [value]="reason.name">{{reason.name}}</option>
+          </select>
+        </div>
+        <div class="inputBx">
+          <span>Value</span>
+          <input type="text" name="" formControlName="value">
+          <select [(ngModel)]="selectValue" name="" [ngModelOptions]="{standalone: true}">
+            <option *ngFor="let value of typeValue" [value]="value.name">{{value.name}}</option>
+          </select>
+        </div>
+      </form>
+      <div class="inputSx">
+        <input type="submit" value="Add Expense" name="" (click)="addExpense()">
+        <input type="submit" value="Save" class="move" name="" (click)="Save()">
+      </div>
+    </div>
+  </div>
+</section>

@@ -15,6 +15,10 @@ import { EnterpriseNewComponent } from './security/views/enterprise/enterprise-n
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatSelectModule } from "@angular/material/select";
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ConfigOperationComponent } from './dashboard/config-operation/config-operation.component';
+import { OperationComponent } from './dashboard/operation/operation.component';
+import {MatTableModule} from "@angular/material/table";
+import { WalletComponent } from './dashboard/wallet/wallet.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     EnterpriseComponent,
     EnterpriseCardComponent,
     EnterpriseNewComponent,
-    DashboardComponent
+    DashboardComponent,
+    ConfigOperationComponent,
+    OperationComponent,
+    WalletComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +41,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppRoutingModule,
     ReactiveFormsModule,
     MatDialogModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTableModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

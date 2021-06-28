@@ -1,4 +1,5 @@
 import {EnterpriseClass} from "./enterprise-class";
+import {RateClass} from "./rate-class";
 
 export interface WalletClass {
   id: number;

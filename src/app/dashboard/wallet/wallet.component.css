@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Economica&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: rgb(242, 242, 242);
+  font-family: 'Economica', sans-serif;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+section .superior {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("src/assets/img/bg1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+section .center {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+section .center span {
+  position: relative;
+  top: 12px;
+  font-size: 1.7vw;
+}
+
+section .center h2 {
+  font-size: 5vw;
+}
+
+section .inferior {
+  height: 70%;
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+section .limit {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+section .limit .wallet-item {
+  width: 110vh;
+  height: 12vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #262524;
+  border-radius: 20px;
+  padding: 15px 25px;
+  cursor: pointer;
+  margin: 15px 10px;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+}
+
+section .limit .wallet-item .col-wallet {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+section .limit .wallet-item .row-wallet {
+  width: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section .limit .wallet-item .row-wallet h4 {
+  font-size: 1.5vw;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+section .limit .wallet-item .row-wallet p {
+  margin-left: 15px;
+  font-size: 1.5vw;
+}
