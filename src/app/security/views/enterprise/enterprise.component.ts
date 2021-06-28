@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {EnterpriseService} from "../../services/enterprise.service";
 import {AuthService} from "../../services/auth.service";
 import {EnterpriseClass} from "../../interfaces/enterprise-class";
-import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
+import {MatDialog} from "@angular/material/dialog";
 import {EnterpriseNewComponent} from "./enterprise-new/enterprise-new.component";
 
 @Component({

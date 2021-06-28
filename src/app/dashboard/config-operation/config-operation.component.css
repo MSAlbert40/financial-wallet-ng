@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Economica&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: rgb(242, 242, 242);
+  font-family: 'Economica', sans-serif;
+}
+
+table {
+  width: 80vh;
+  background-color: rgb(18, 17, 16);
+  border-radius: 15px;
+}
+
+.mat-header-cell {
+  font-size: 25px;
+}
+
+.mat-cell {
+  font-size: 20px;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+section .imgBx {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("src/assets/img/bg1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+section .imgBX .formBx {
+  width: 80%;
+}
+
+section .contentBX {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .contentBX .formBx {
+  width: 80%;
+}
+
+section .contentBX .formBx span {
+  position: relative;
+  display: inline-block;
+  font-size: 1.4vw;
+  top: 12px;
+}
+
+section .contentBX .formBx h2 {
+  font-size: 3.3vw;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+  margin-top: 5px;
+  letter-spacing: 1px;
+}
+
+section .contentBX .formBx .inputBx {
+  margin-bottom: 20px;
+}
+
+section .contentBX .formBx .inputBx span {
+  font-size: 1.9vw;
+  display: inline-block;
+}
+
+section .contentBX .formBx .inputBx input {
+  width: 26%;
+  padding: 10px 20px;
+  margin-left: 15px;
+  outline: none;
+  font-weight: 400;
+  border: 1px solid #262524;
+  font-size: 1.4vw;
+  color: #F2F2F2;
+  background: rgb(38, 37, 36);
+  border-radius: 15px;
+}
+
+section .contentBX .formBx .inputLBx {
+  margin-bottom: 20px;
+}
+
+section .contentBX .formBx .inputLBx span {
+  font-size: 1.9vw;
+  display: inline-block;
+}
+
+section .contentBX .formBx .inputLBx select {
+  width: 42%;
+  padding: 10px 20px;
+  margin-left: 15px;
+  outline: none;
+  font-weight: 400;
+  border: 1px solid #262524;
+  font-size: 1.4vw;
+  color: #F2F2F2;
+  background: rgb(38, 37, 36);
+  border-radius: 15px;
+}
+
+section .contentBX .formBx .inputBx select {
+  width: 30%;
+  padding: 10px 20px;
+  margin-left: 15px;
+  outline: none;
+  font-weight: 400;
+  border: 1px solid #262524;
+  font-size: 1.4vw;
+  color: #F2F2F2;
+  background: rgb(38, 37, 36);
+  border-radius: 15px;
+}
+
+section .contentBX .formBx .inputSx input[type="submit"] {
+  width: 30%;
+  padding: 10px 20px;
+  margin-top: 5px;
+  font-size: 1.4vw;
+  border-radius: 15px;
+  background: rgb(4, 191, 173);
+  color: #262524;
+  outline: none;
+  border: none;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.move {
+  margin-left: 15px;
+}
