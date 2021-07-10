@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Economica&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: rgb(242, 242, 242);
+  font-family: 'Economica', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+  background-color: rgb(18, 17, 16);
+  border-radius: 15px;
+}
+
+.mat-header-cell {
+  font-size: 25px;
+}
+
+.mat-cell {
+  font-size: 20px;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+section .superior {
+  height: 45%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+section .inferior {
+  height: 55%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("src/assets/img/bg1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+section .limit {
+  width: 90%;
+  display: flex;
+  margin-top: 35px;
+}
+
+section .center {
+  width: 90%;
+  display: table;
+  margin-top: 120px;
+}
+
+section .center .rate-card,
+section .center .wallet-card {
+  width: 20%;
+  height: 100vh;
+  padding: 20px 30px;
+  display: table-cell;
+}
+
+section .center .rate-card h2,
+section .center .wallet-card h2 {
+  font-size: 3em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+section .center .rate-card .fill,
+section .center .wallet-card .fill {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+section .center .rate-card .fill span,
+section .center .wallet-card .fill span {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+section .center .rate-card .fill p,
+section .center .wallet-card .fill p {
+  margin-left: 10px;
+  font-size: 1.8em;
+}
+
+section .center .discount-card {
+  width: 55%;
+  height: 100vh;
+  padding: 20px 30px;
+  display: table-cell;
+}
+
+section .center .discount-card h2 {
+  font-size: 3em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+section .center .discount-card .double-fill {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+section .center .discount-card .double-fill .right-fill,
+section .center .discount-card .double-fill .left-fill {
+  width: 50%;
+  display: table-cell;
+}
+
+section .center .discount-card .fill {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+section .center .discount-card .fill span {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+section .center .discount-card .fill input {
+  width: 35%;
+  padding: 5px 20px;
+  margin-left: 15px;
+  outline: none;
+  font-weight: 400;
+  border: 1px solid #262524;
+  font-size: 1.5em;
+  color: #F2F2F2;
+  background: rgb(38, 37, 36);
+  border-radius: 15px;
+}
+
+section .center .discount-card .fill select {
+  width: 45%;
+  padding: 5px 20px;
+  margin-left: 15px;
+  outline: none;
+  font-weight: 400;
+  border: 1px solid #262524;
+  font-size: 1.5em;
+  color: #F2F2F2;
+  background: rgb(38, 37, 36);
+  border-radius: 15px;
+}
+
+section .center .discount-card .fillSx input[type="submit"] {
+  width: 35%;
+  padding: 10px 20px;
+  margin-top: 5px;
+  font-size: 1.4em;
+  border-radius: 15px;
+  background: rgb(4, 191, 173);
+  color: #262524;
+  outline: none;
+  border: none;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.move {
+  margin-left: 15px;
+}

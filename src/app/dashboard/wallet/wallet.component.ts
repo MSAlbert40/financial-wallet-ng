@@ -57,4 +57,10 @@ export class WalletComponent implements OnInit {
       default: console.log('Sorry not found');
     }
   }
+
+  walletDetail(id: number) {
+    this.walletService.setDetailWallet(id);
+    window.location.href = '/Wallet-Detail';
+    console.log(id);
+  }
 }

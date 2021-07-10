@@ -21,7 +21,7 @@ section .superior {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("src/assets/img/bg1.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("src/assets/img/bg1.jpg");
   background-position: center;
   background-size: cover;
 }

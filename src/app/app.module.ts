@@ -19,6 +19,7 @@ import { ConfigOperationComponent } from './dashboard/config-operation/config-op
 import { OperationComponent } from './dashboard/operation/operation.component';
 import {MatTableModule} from "@angular/material/table";
 import { WalletComponent } from './dashboard/wallet/wallet.component';
+import { WalletDetailComponent } from './dashboard/wallet/wallet-detail/wallet-detail.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { WalletComponent } from './dashboard/wallet/wallet.component';
     DashboardComponent,
     ConfigOperationComponent,
     OperationComponent,
-    WalletComponent
+    WalletComponent,
+    WalletDetailComponent
   ],
   imports: [
     BrowserModule,
